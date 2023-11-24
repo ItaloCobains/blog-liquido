@@ -4,3 +4,11 @@ liquido.rotaGet(funcao (requisicao, resposta) {
   var resultado = lincones.executar("SELECIONAR * DE publicacoes")
   resposta.enviar(resultado.linhasRetornadas).status(200)
 })
+
+liquido.rotaPost(funcao (requisicao, resposta){
+  var titulo = requisicao.body.TITULO
+  var conteudo = requisicao.body.CONTEUDO
+  var autor = requisicao.body.AUTOR
+  var retorno = lincones.executar("INSERIR EM publicacoes (TITULO, CONTEUDO, AUTOR) VALORES (" + titulo + ", " + conteudo + ", " + autor + ")")
+  resposta.enviar(retorno).status(201)
+})
