@@ -1,0 +1,6 @@
+liquido.rotaGet(funcao (requisicao, resposta) {
+  lincones.executar("CRIAR TABELA publicacoes (ID INTEIRO NAO NULO CHAVE PRIMARIA AUTO INCREMENTO, TITULO TEXTO(100) NAO NULO, CONTEUDO TEXTO(255), AUTOR TEXTO(100) NAO NULO)")
+  lincones.executar("INSERIR EM publicacoes (TITULO, CONTEUDO, AUTOR) VALORES ('Meu primeiro post', 'Conteudo do meu primeiro post', 'Lincon')")
+  var resultado = lincones.executar("SELECIONAR * DE publicacoes")
+  resposta.enviar(resultado.linhasRetornadas).status(200)
+})

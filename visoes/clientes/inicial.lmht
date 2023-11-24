@@ -1,0 +1,26 @@
+<lmht>
+  <cabeca>
+    <titulo>Listagem de clientes</titulo>
+  </cabeca>
+  <corpo>
+    <titulo1>
+      Clientes
+    </titulo1>
+    <tabela>
+      <cabeca-tabela>
+        <linha>
+          <celula>Id</celula>
+          <celula>Nome</celula>
+        </linha>
+      </cabeca-tabela>
+      <corpo-tabela>
+        {{#cada linhas}}
+          <linha>
+            <celula>{{ID}}</celula>
+            <celula>{{NOME}}</celula>
+          </linha>
+        {{/cada}}
+      </corpo-tabela>
+    </tabela>
+  </corpo>
+</lmht>

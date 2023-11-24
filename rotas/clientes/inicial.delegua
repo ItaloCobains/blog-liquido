@@ -1,0 +1,7 @@
+liquido.rotaGet(funcao (requisicao, resposta) {
+  lincones.executar("CRIAR TABELA clientes (ID INTEIRO NAO NULO CHAVE PRIMARIA AUTO INCREMENTO, NOME TEXTO(100) NAO NULO)")
+  lincones.executar("INSERIR EM clientes (NOME) VALORES ('Italo') ")
+  lincones.executar("INSERIR EM clientes (NOME) VALORES ('Leonel') ")
+  var respostaBanco = lincones.executar("SELECIONAR * DE clientes")
+  resposta.lmht({ "linhas": respostaBanco.linhasRetornadas }).status(200)
+})

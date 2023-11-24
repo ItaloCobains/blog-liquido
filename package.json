@@ -1,0 +1,19 @@
+{
+  "name": "liquido_blog",
+  "version": "1.0.0",
+  "description": "Blog escrito em liquido",
+  "main": "index.js",
+  "author": "ItaloCobains",
+  "scripts": {
+    "start": "node ./node_modules/liquido/index.js",
+    "dev": "nodemon ./node_modules/liquido/index.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "16.x"
+  },
+  "dependencies": {
+    "@designliquido/lincones-sqlite": "0.0.2",
+    "liquido": "0.0.13"
+  }
+}

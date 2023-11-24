@@ -1,0 +1,4 @@
+{
+  "watch": ["rotas"],
+  "ext": "delegua, lmht, foles"
+}
